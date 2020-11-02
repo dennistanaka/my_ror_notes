@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    <main class="page-content" aria-label="Content">
+
+      {%- include notes-navigation.html -%}
+
+      {%- include header.html -%}
+
+      {%- include mobile-notes-navigation.html -%}
+
+      <div class="left-fill"></div>
+      <div class="right-fill"></div>
+      <div class="bottom-fill"></div>
+
+      <div class="page-content-wrapper">
+        {{ content }}
+      </div>
+
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

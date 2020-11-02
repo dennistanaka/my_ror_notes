@@ -1,0 +1,26 @@
+- title: Basics
+  notes:
+    - basics
+    - environment
+    - projects
+    - generators
+    - validation
+    - views
+    - testing
+- title: Intermediate
+  notes:
+    - concerns
+    - deprecations
+    - code_analyzers
+- title: Authentication & Authorization
+  notes:
+    - devise
+    - pundit
+- title: Other Tasks
+  notes:
+      - pagination
+      - image_upload
+      - soft_delete
+- title: Rails versions
+  notes:
+    - 5.2.0

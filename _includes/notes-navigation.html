@@ -1,0 +1,16 @@
+<sidebar class="notes-navigation">
+  <a class="website-logo-link" href="{{ site.baseurl }}/">
+    <img class="website-logo" src="{{ site.baseurl }}/assets/images/logo.png" alt="My Ruby on Rails Notes logo" />
+  </a>
+  <ul>
+    {%- for section in site.data.notes -%}
+      <h3 class="section-title">{{ section.title }}</h3>
+      {%- for item in section.notes -%}
+        {%- assign item_url = item | prepend:"/notes/" | append:"/" -%}
+        {%- assign note = site.notes | where:"url", item_url | first -%}
+        {%- assign note_url = note.url | prepend: site.baseurl -%}
+        <li class="{% if note.url == page.url %}current{% endif %}"><i class="fas fa-file navigation-item-icon {% if note.url == page.url %}current{% endif %}"></i><a href="{{ note_url }}">{{ note.title }}</a></li>
+      {%- endfor -%}
+    {%- endfor -%}
+  </ul>
+</sidebar>
